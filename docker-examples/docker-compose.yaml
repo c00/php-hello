@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx
+    depends_on:
+      - php-hello
+    ports:
+      - "80:80"
+
+  php-hello:
+    image: crispyduck/php-hello:1.0.0
+    environment:
+      - PHP_MESSAGE=working!
+      - PHP_INFO_PASS=secret123
