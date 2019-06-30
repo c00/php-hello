@@ -15,3 +15,11 @@ Settings are environment variables. Following are possible:
 To debug your environment it might be useful to see the output of `phpinfo()`. If you supply a `PHP_INFO_PASS` as an
 environment variable and add the same value as a parameter (e.g. `http://localhost?pass=mysecret`), it will print `phpinfo()`.
 If you don't set this value, `phpinfo` will not be shown, regardless of query parameters.
+
+## Docker
+
+To build a new image:
+
+```
+docker build -t crispyduck/php-hello:latest .
+```
